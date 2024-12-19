@@ -12,9 +12,9 @@ const RootNavigator = () => {
     <>
       <StatusBar barStyle={"dark-content"} />
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName="Home">
           <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="Detail Forecast" component={CityDetailsScreen} />
+          <Stack.Screen name="DetailForecast" component={CityDetailsScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

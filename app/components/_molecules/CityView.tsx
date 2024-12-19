@@ -12,7 +12,7 @@ const CityView = ({ item, navigation, handleRemove }: CityViewProps) => {
   return (
     <View key={item.location.localtime_epoch} style={styles.card}>
       <Pressable
-        onPress={() => navigation.navigate("Detail Forecast", { data: item })}
+        onPress={() => navigation.navigate("DetailForecast", { data: item })}
         style={({ pressed }) => [
           styles.pressableContainer,
           pressed && styles.pressed,
