@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import RenderForecastItem from "../components/_molecules/RenderForecastItem";
 
-const DetailsScreen = ({ route }: { route: any }) => {
+const CityDetailsScreen = ({ route }: { route: any }) => {
   const data = route.params.data;
 
   return (
@@ -19,7 +19,9 @@ const DetailsScreen = ({ route }: { route: any }) => {
           <Text style={styles.currentTempText}>
             Current Temperature: {data.current.temp_c}°C
           </Text>
-          <Text style={styles.subHeaderText}>7-Day Forecast:</Text>
+          <Text style={styles.subHeaderText}>
+            {data.forecast.forecastday.length}-Day Forecast:
+          </Text>
           <FlatList
             data={data.forecast.forecastday}
             keyExtractor={(item) => item.date}
@@ -67,4 +69,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DetailsScreen;
+export default CityDetailsScreen;
